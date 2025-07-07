@@ -32,4 +32,30 @@ describe('funcionalidade: login', () => {
         
     });
 
+
 })
+
+       it('Deve fazer login com sucesso - Usando massa de dados', () => {
+          cy.get('#username').type(perfil.Usuario)
+        cy.get('#password').type(perfil.Senha)
+        cy.get('.woocommerce-form > .button').click()
+        cy.get('.page-title').should
+    });
+      it('Deve fazer login com sucesso - Usando fixture', () => {
+       cy.fixture('Perfil').then((dados) => {
+        cy.get('#username').type(dados.Usuario)
+        cy.get('#password').type(dados.Senha, {log: false}) // log: false para não exibir a senha no log do Cypress
+        cy.get('.woocommerce-form > .button').click()
+        cy.get('.page-title').should
+
+        })
+
+
+      })   
+it.only('Deve fazer login com sucesso - Usando comando customizado', () => {
+        cy.Arquivo("fabianodiogo8545@gmail.com", "Ambipom85#")
+          cy.get('.page-title').should('contain', 'Minha conta') // ou outro texto esperado
+})
+
+
+
