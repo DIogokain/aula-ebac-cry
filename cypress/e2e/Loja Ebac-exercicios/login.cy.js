@@ -53,7 +53,7 @@ describe('funcionalidade: login', () => {
 
       })   
 it.only('Deve fazer login com sucesso - Usando comando customizado', () => {
-        cy.Arquivo("fabianodiogo8545@gmail.com", "Ambipom85#")
+        cy.login("fabianodiogo8545@gmail.com", "Ambipom85#")
           cy.get('.page-title').should('contain', 'Minha conta') // ou outro texto esperado
 })
 

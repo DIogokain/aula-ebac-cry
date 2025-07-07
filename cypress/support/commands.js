@@ -5,7 +5,7 @@ Cypress.Commands.add('login', (Usuario, senha) => {
         cy.get('.woocommerce-form > .button').click()
  })
 
- cypress.Commands.add('Precadastro', (email, senha, nome, sobrenome) => {
+ Cypress.Commands.add('Precadastro', (email, senha, nome, sobrenome) => {
 
        cy.get('#reg_email').type(email)
             cy.get('#reg_password').type(senha)
